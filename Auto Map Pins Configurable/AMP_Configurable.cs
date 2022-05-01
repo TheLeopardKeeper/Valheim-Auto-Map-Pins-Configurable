@@ -798,6 +798,14 @@ namespace AMP_Configurable
                     showName = Mod.showTarName.Value;
                     pinSize = Mod.pinTarSize.Value;
                     break;
+		case "126":
+                    aName = Mod.infectedTreeName.Value;
+                    pType = 126;
+                    aSave = Mod.saveInfectedTree.Value;
+                    aIcon = Assets.infectedTreeSprite;
+                    showName = Mod.showInfectedTreeName.Value;
+                    pinSize = Mod.pinInfectedTreeSize.Value;
+                    break;
             }
         }
 
@@ -826,7 +834,8 @@ namespace AMP_Configurable
         public static Sprite cryptSprite;
         public static Sprite sunkenCryptSprite;
         public static Sprite mountainCaveSprite;
-        public static Sprite tarSprite;
+        public static Sprite infectedTreeSprite;
+	public static Sprite tarSprite;
         public static Sprite trollCaveSprite;
         public static Sprite skeletonSprite;
         public static Sprite surtlingSprite;
@@ -857,8 +866,9 @@ namespace AMP_Configurable
                     eggSprite = LoadSprite(LoadTexture(ResourceUtils.GetResource(Assembly.GetExecutingAssembly(), "AMP_Configurable.Resources.dragonegg.png")));
                     cryptSprite = LoadSprite(LoadTexture(ResourceUtils.GetResource(Assembly.GetExecutingAssembly(), "AMP_Configurable.Resources.surtling_core.png")));
                     sunkenCryptSprite = LoadSprite(LoadTexture(ResourceUtils.GetResource(Assembly.GetExecutingAssembly(), "AMP_Configurable.Resources.witheredbone.png")));
-					mountainCaveSprite = LoadSprite(LoadTexture(ResourceUtils.GetResource(Assembly.GetExecutingAssembly(), "AMP_Configurable.Resources.MountainCave.png")));
-                    tarSprite = LoadSprite(LoadTexture(ResourceUtils.GetResource(Assembly.GetExecutingAssembly(), "AMP_Configurable.Resources.tarpits.png")));
+		    mountainCaveSprite = LoadSprite(LoadTexture(ResourceUtils.GetResource(Assembly.GetExecutingAssembly(), "AMP_Configurable.Resources.MountainCave.png")));
+                    infectedTreeSprite = LoadSprite(LoadTexture(ResourceUtils.GetResource(Assembly.GetExecutingAssembly(), "AMP_Configurable.Resources.InfectedTree.png")));
+		    tarSprite = LoadSprite(LoadTexture(ResourceUtils.GetResource(Assembly.GetExecutingAssembly(), "AMP_Configurable.Resources.tarpits.png")));
                     trollCaveSprite = LoadSprite(LoadTexture(ResourceUtils.GetResource(Assembly.GetExecutingAssembly(), "AMP_Configurable.Resources.TrophyFrostTroll.png")));
                     skeletonSprite = LoadSprite(LoadTexture(ResourceUtils.GetResource(Assembly.GetExecutingAssembly(), "AMP_Configurable.Resources.TrophySkeleton.png")));
                     surtlingSprite = LoadSprite(LoadTexture(ResourceUtils.GetResource(Assembly.GetExecutingAssembly(), "AMP_Configurable.Resources.TrophySurtling.png")));
