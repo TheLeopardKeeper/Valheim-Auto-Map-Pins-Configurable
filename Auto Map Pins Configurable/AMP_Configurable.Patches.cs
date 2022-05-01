@@ -374,6 +374,13 @@ namespace AMP_Configurable.Patches
                         aName = "MountainCave";
                     }
                     break;
+                case "InfestedTree02":
+                case "InfestedTree02(Clone)":
+                    if (Mod.pinMountainCave.Value)
+                    {
+                        aName = "InfestedTree";
+                    }
+                    break;
                 case "TrollCave01":
                 case "TrollCave02":
                 case "TrollCave01(Clone)":
