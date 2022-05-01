@@ -29,6 +29,7 @@ namespace AMP_Configurable.Commands
           "Iron",
           "Leviathan",
           "Mushroom",
+          "MountainCave",
           "Obsidian",
           "Serpent",
           "Silver",
@@ -36,6 +37,7 @@ namespace AMP_Configurable.Commands
           "SunkenCrypt",
           "Surtling",
           "Thistle",
+          "Tar",
           "Tin",
           "TrollCave",
           "Turnip"

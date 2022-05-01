@@ -98,6 +98,11 @@ namespace AMP_Configurable
         public static ConfigEntry<bool> showDragonEggName;
         public static ConfigEntry<string> dragonEggName;
         public static ConfigEntry<float> pinDragonEggSize;
+        public static ConfigEntry<bool> saveTar;
+        public static ConfigEntry<bool> pinTar;
+        public static ConfigEntry<bool> showTarName;
+        public static ConfigEntry<string> tarName;
+        public static ConfigEntry<float> pinTarSize;
         //***LOCATIONS***//
         public static ConfigEntry<bool> pinCrypt;
         public static ConfigEntry<bool> saveCrypt;
@@ -109,6 +114,11 @@ namespace AMP_Configurable
         public static ConfigEntry<bool> showSunkenCryptName;
         public static ConfigEntry<string> sunkenCryptName;
         public static ConfigEntry<float> pinSunkenCryptSize;
+        public static ConfigEntry<bool> saveMountainCave;
+		public static ConfigEntry<bool> pinMountainCave;
+        public static ConfigEntry<bool> showMountainCaveName;
+        public static ConfigEntry<string> mountainCaveName;
+        public static ConfigEntry<float> pinMountainCaveSize;
         public static ConfigEntry<bool> pinTrollCave;
         public static ConfigEntry<bool> saveTrollCave;
         public static ConfigEntry<bool> showTrollCaveName;
@@ -249,6 +259,11 @@ namespace AMP_Configurable
             showDragonEggName = Config.Bind("Misc - Dragon Eggs", "ShowDragonEggName", true, "Show name for Dragon Eggs");
             dragonEggName = Config.Bind<string>("Misc - Dragon Eggs", "DragonEggNameDisplay", "DragonEgg", "Display name for Dragon Eggs");
             pinDragonEggSize = Config.Bind<float>("Misc - Dragon Eggs", "PinDragonEggSize", 20, "Size of Dragon Eggs pin on minimap/main Map (20 is recommended)");
+            pinTar = Config.Bind("Locations - Tar", "PinTar", true, "Show pins for Tar");
+            saveTar = Config.Bind("Locations - Tar", "SaveTar", false, "Save pins for Tar");
+            showTarName = Config.Bind("Locations - Tar", "ShowTarName", true, "Show name for Tar");
+            tarName = Config.Bind<string>("Locations - Tar", "TarNameDisplay", "Tar", "Display name for Tar");
+            pinTarSize = Config.Bind<float>("Locations - Tar", "PinTarSize", 25, "Size of Tar pin on minimap/main Map (25 is recommended)");
             //***LOCATIONS***//
             pinCrypt = Config.Bind("Locations - Crypt", "PinCrypt", true, "Show pins for Crypts");
             saveCrypt = Config.Bind("Locations - Crypt", "SaveCrypt", false, "Save pins for Crypts");
@@ -260,6 +275,11 @@ namespace AMP_Configurable
             showSunkenCryptName = Config.Bind("Locations - SunkenCrypt", "ShowSunkenCryptName", true, "Show name for SunkenCrypts");
             sunkenCryptName = Config.Bind<string>("Locations - SunkenCrypt", "SunkenCryptNameDisplay", "SunkenCrypt", "Display name for SunkenCrypts");
             pinSunkenCryptSize = Config.Bind<float>("Locations - SunkenCrypt", "PinSunkenCryptSize", 25, "Size of SunkenCrypts pin on minimap/main Map (25 is recommended)");
+            pinMountainCave = Config.Bind("Locations - MountainCave", "PinMountainCave", true, "Show pins for MountainCaves");
+            saveMountainCave = Config.Bind("Locations - MountainCave", "SaveMountainCave", false, "Save pins for MountainCaves");
+            showMountainCaveName = Config.Bind("Locations - MountainCave", "ShowMountainCaveName", true, "Show name for MountainCaves");
+            mountainCaveName = Config.Bind<string>("Locations - MountainCave", "MountainCaveNameDisplay", "MountainCave", "Display name for MountainCaves");
+            pinMountainCaveSize = Config.Bind<float>("Locations - MountainCave", "PinMountainCaveSize", 25, "Size of MountainCaves pin on minimap/main Map (25 is recommended)");
             pinTrollCave = Config.Bind("Locations - TrollCave", "PinTrollCave", true, "Show pins for TrollCaves");
             saveTrollCave = Config.Bind("Locations - TrollCave", "SaveTrollCave", false, "Save pins for TrollCaves");
             showTrollCaveName = Config.Bind("Locations - TrollCave", "ShowTrollCaveName", true, "Show name for TrollCaves");
@@ -751,6 +771,24 @@ namespace AMP_Configurable
                     showName = Mod.showLeviathanName.Value;
                     pinSize = Mod.pinLeviathanSize.Value;
                     break;
+                case "MountainCave":
+                case "124":
+                    aName = Mod.mountainCaveName.Value;
+                    pType = 124;
+                    aSave = Mod.saveMountainCave.Value;
+                    aIcon = Assets.mountainCaveSprite;
+                    showName = Mod.showMountainCaveName.Value;
+                    pinSize = Mod.pinMountainCaveSize.Value;
+                    break;
+                case "Tar":
+                case "125":
+                    aName = Mod.tarName.Value;
+                    pType = 125;
+                    aSave = Mod.saveTar.Value;
+                    aIcon = Assets.tarSprite;
+                    showName = Mod.showTarName.Value;
+                    pinSize = Mod.pinTarSize.Value;
+                    break;
             }
         }
 
@@ -778,6 +816,8 @@ namespace AMP_Configurable
         public static Sprite eggSprite;
         public static Sprite cryptSprite;
         public static Sprite sunkenCryptSprite;
+        public static Sprite mountainCaveSprite;
+        public static Sprite tarSprite;
         public static Sprite trollCaveSprite;
         public static Sprite skeletonSprite;
         public static Sprite surtlingSprite;
@@ -808,6 +848,8 @@ namespace AMP_Configurable
                     eggSprite = LoadSprite(LoadTexture(ResourceUtils.GetResource(Assembly.GetExecutingAssembly(), "AMP_Configurable.Resources.dragonegg.png")));
                     cryptSprite = LoadSprite(LoadTexture(ResourceUtils.GetResource(Assembly.GetExecutingAssembly(), "AMP_Configurable.Resources.surtling_core.png")));
                     sunkenCryptSprite = LoadSprite(LoadTexture(ResourceUtils.GetResource(Assembly.GetExecutingAssembly(), "AMP_Configurable.Resources.witheredbone.png")));
+					mountainCaveSprite = LoadSprite(LoadTexture(ResourceUtils.GetResource(Assembly.GetExecutingAssembly(), "AMP_Configurable.Resources.MountainCave.png")));
+                    tarSprite = LoadSprite(LoadTexture(ResourceUtils.GetResource(Assembly.GetExecutingAssembly(), "AMP_Configurable.Resources.tarpits.png")));
                     trollCaveSprite = LoadSprite(LoadTexture(ResourceUtils.GetResource(Assembly.GetExecutingAssembly(), "AMP_Configurable.Resources.TrophyFrostTroll.png")));
                     skeletonSprite = LoadSprite(LoadTexture(ResourceUtils.GetResource(Assembly.GetExecutingAssembly(), "AMP_Configurable.Resources.TrophySkeleton.png")));
                     surtlingSprite = LoadSprite(LoadTexture(ResourceUtils.GetResource(Assembly.GetExecutingAssembly(), "AMP_Configurable.Resources.TrophySurtling.png")));

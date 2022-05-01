@@ -367,6 +367,13 @@ namespace AMP_Configurable.Patches
                         aName = "SunkenCrypt";
                     }
                     break;
+                case "MountainCave02":
+                case "MountainCave02(Clone)":
+                    if (Mod.pinMountainCave.Value)
+                    {
+                        aName = "MountainCave";
+                    }
+                    break;
                 case "TrollCave01":
                 case "TrollCave02":
                 case "TrollCave01(Clone)":
@@ -374,6 +381,19 @@ namespace AMP_Configurable.Patches
                     if (Mod.pinTrollCave.Value)
                     {
                         aName = "TrollCave";
+                    }
+                    break;
+                case "TarPit1":
+                case "TarPit2":
+                case "TarPit3":
+                case "TarPit4":
+                case "TarPit1(Clone)":
+                case "TarPit2(Clone)":
+                case "TarPit3(Clone)":
+                case "TarPit4(Clone)":
+                    if (Mod.pinTar.Value)
+                    {
+                        aName = "Tar";
                     }
                     break;
                 case "FireHole":
