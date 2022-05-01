@@ -113,9 +113,10 @@
     <EmbeddedResource Include="Resources\surtling_core.png" />
     <EmbeddedResource Include="Resources\TrophyFrostTroll.png" />
     <EmbeddedResource Include="Resources\MountainCave.png" />
-    <EmbeddedResource Include="Resources\tarpits.png" />
     <EmbeddedResource Include="Resources\TrophySerpent.png" />
     <EmbeddedResource Include="Resources\witheredbone.png" />
+    <EmbeddedResource Include="Resources\InfectedTree.png" />
+    <EmbeddedResource Include="Resources\tarpits.png" />
     <EmbeddedResource Include="Resources\carrot.png" />
     <EmbeddedResource Include="Resources\turnip.png" />
     <EmbeddedResource Include="Resources\chitin.png" />
