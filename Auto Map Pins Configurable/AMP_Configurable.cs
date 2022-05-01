@@ -98,7 +98,12 @@ namespace AMP_Configurable
         public static ConfigEntry<bool> showDragonEggName;
         public static ConfigEntry<string> dragonEggName;
         public static ConfigEntry<float> pinDragonEggSize;
-        public static ConfigEntry<bool> saveTar;
+        public static ConfigEntry<bool> saveInfectedTree;
+        public static ConfigEntry<bool> pinInfectedTree;
+        public static ConfigEntry<bool> showInfectedTreeName;
+        public static ConfigEntry<string> infectedTreeName;
+        public static ConfigEntry<float> pinInfectedTreeSize;
+	public static ConfigEntry<bool> saveTar;
         public static ConfigEntry<bool> pinTar;
         public static ConfigEntry<bool> showTarName;
         public static ConfigEntry<string> tarName;
@@ -115,7 +120,7 @@ namespace AMP_Configurable
         public static ConfigEntry<string> sunkenCryptName;
         public static ConfigEntry<float> pinSunkenCryptSize;
         public static ConfigEntry<bool> saveMountainCave;
-		public static ConfigEntry<bool> pinMountainCave;
+	public static ConfigEntry<bool> pinMountainCave;
         public static ConfigEntry<bool> showMountainCaveName;
         public static ConfigEntry<string> mountainCaveName;
         public static ConfigEntry<float> pinMountainCaveSize;
@@ -260,7 +265,11 @@ namespace AMP_Configurable
             dragonEggName = Config.Bind<string>("Misc - Dragon Eggs", "DragonEggNameDisplay", "DragonEgg", "Display name for Dragon Eggs");
             pinDragonEggSize = Config.Bind<float>("Misc - Dragon Eggs", "PinDragonEggSize", 20, "Size of Dragon Eggs pin on minimap/main Map (20 is recommended)");
             pinTar = Config.Bind("Locations - Tar", "PinTar", true, "Show pins for Tar");
-            saveTar = Config.Bind("Locations - Tar", "SaveTar", false, "Save pins for Tar");
+            saveInfectedTree = Config.Bind("Locations - InfectedTree", "SaveInfectedTree", false, "Save pins for Infected Tree");
+            showInfectedTreeName = Config.Bind("Locations - InfectedTree", "ShowInfectedTreeName", true, "Show name for Infected Tree");
+            infectedTreeName = Config.Bind<string>("Locations - InfectedTree", "InfectedTreeNameDisplay", "Infected Tree", "Display name for Infected Tree");
+            pinInfectedTreeSize = Config.Bind<float>("Locations - InfectedTree", "PinInfectedTreeSize", 25, "Size of Infected Tree pin on minimap/main Map (25 is recommended)");
+	    saveTar = Config.Bind("Locations - Tar", "SaveTar", false, "Save pins for Tar");
             showTarName = Config.Bind("Locations - Tar", "ShowTarName", true, "Show name for Tar");
             tarName = Config.Bind<string>("Locations - Tar", "TarNameDisplay", "Tar", "Display name for Tar");
             pinTarSize = Config.Bind<float>("Locations - Tar", "PinTarSize", 25, "Size of Tar pin on minimap/main Map (25 is recommended)");
