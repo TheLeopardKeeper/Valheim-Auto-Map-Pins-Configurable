@@ -25,6 +25,7 @@ namespace AMP_Configurable.Commands
           "DragonEgg",
           "Draugr",
           "Flametal",
+          "infestedtree",
           "Greydwarf",
           "Iron",
           "Leviathan",
